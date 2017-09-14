@@ -20,7 +20,7 @@ class CreateBotTable extends Migration
         $table->foreign('regNr')->references('regNr')->on('fordon');
 
         $table->integer('userId')->unsigned();
-        $table->foreign('userId')->references('id')->on('user');
+        $table->foreign('userId')->references('id')->on('users');
 
 
 
