@@ -15,13 +15,14 @@ class CreateBotTable extends Migration
       Schema::create('bot', function (Blueprint $table) {
 
         $table->string('kod')->primary();
+
         #Registrerar med foreign key vilket fordon boten är registerad på.
         $table->string('regNr')->unique();
         $table->foreign('regNr')->references('regNr')->on('fordon');
-
+        /* Den här foreign keyn behövs inte.
         $table->integer('userId')->unsigned();
         $table->foreign('userId')->references('id')->on('users');
-
+        */
 
 
         $table->string('plats');

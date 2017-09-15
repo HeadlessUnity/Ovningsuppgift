@@ -14,6 +14,9 @@ class CreateFordonTable extends Migration
   public function up() {
       Schema::create('fordon', function (Blueprint $table) {
           //$table->increments('id');
+          /*innehåller bara ett attribut/kolumn, men behövs
+          för att separera ut entiteter.
+          */
           $table->string('regNr')->primary();
 
           $table->timestamps();
