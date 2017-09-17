@@ -13,6 +13,8 @@ class CreateFordonTable extends Migration
    */
   public function up() {
       Schema::create('fordon', function (Blueprint $table) {
+          /* dålig idé att ha en auto-incrementor eftersom säkerhetsrisk.
+          */
           //$table->increments('id');
           /*innehåller bara ett attribut/kolumn, men behövs
           för att separera ut entiteter.
