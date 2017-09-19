@@ -71,16 +71,4 @@ class BotController extends Controller {
         return "Uppdaterade bot-instans med kod: " . $Bot->kod;
     }
 
-    /**
-     * Ta bort från storage.
-
-     */
-
-    public function destroy(Request $request) {
-        $Bot = Bot::find($request->input('kod'));
-
-        $Bot->delete();
-
-        return "Bot-instans raderad med kod: " . $request->kod;
-    }
 }

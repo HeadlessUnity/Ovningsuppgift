@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::resource('bot', 'Botcontroller');
-
-Route::resource('fordon', 'Fordoncontroller',
-    ['except' => ['edit', 'update']]);
+Route::get('bot/{kod?}', 'Employees@index');
+//Route::post('/api/v1/kod', 'Employees@store');
+Route::post('bot/{kod}', 'Employees@update');
+//Route::delete('/api/v1/employees/{id}', 'Employees@destroy');
